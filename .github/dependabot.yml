@@ -4,8 +4,7 @@ updates:
 - package-ecosystem: "github-actions"
   directory: "/"
   schedule:
-    interval: "cron"
-    cronjob: "0 15 * * *"
+    interval: "daily"
   rebase-strategy: disabled
   commit-message:
       prefix: ":✈️:"
