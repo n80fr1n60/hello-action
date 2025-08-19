@@ -64,10 +64,16 @@ jobs:
       with:
         persist-credentials: false
 
-
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
       uses: github/codeql-action/init@df559355d593797519d70b90fc8edd5db049e7a2 # v3.29.9
       with:
         languages: ${{ matrix.language }}
         queries: +security-extended
+
+    # build all the compiled languages
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@181d5eefc20863364f96762470ba6f862bdef56b # v3.29.2
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@181d5eefc20863364f96762470ba6f862bdef56b # v3.29.2
