@@ -8,3 +8,11 @@ updates:
   rebase-strategy: disabled
   commit-message:
       prefix: ":✈️:"
+
+- package-ecosystem: "github-actions"
+  directory: "/.github/workflows"
+  schedule:
+    interval: "daily"
+  rebase-strategy: disabled
+  commit-message:
+      prefix: ":✈️📁:"
